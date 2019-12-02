@@ -1,0 +1,47 @@
+# AIM Django Demo Project
+
+The project consists of 3 reports, where one report can be drilled down to the next level. 
+
+## Install
+
+  - create a new venv eg. `virtualenv -p python3 /path/to/myenv`
+  - install dependencies from requirements.txt
+
+## Tasks
+
+  1) Write a custom django admin command to ingest demo data eg. `python manage.py ingest demo_data.csv`
+
+  2) On the main page show a table with the following columns:
+    - date
+    - sum(revenue)
+    - sum(clicks)
+
+    (make sure revenue and clicks are aggregated by date)
+
+  3) When clicked on the date show another table with the following columns:
+    - publisher name
+    - sum(revenue)
+    - sum(clicks)
+
+    (only show data for the selected day, data should be aggregated by publisher name)
+  
+  4) When clicked on the publisher name show a table with the following columns:
+    - source
+    - sum(revenue)
+    - sum(clicks)
+
+    (only show data for selected publisher and day)
+
+## Info
+
+The pre-defined models might be changed/extended to your needs. Afterwards make sure to create migrations and add them to the git
+
+You can find demo data attached or generate your own using `generate_data.py`.
+
+Authentication is not required.
+
+Styling is not required. You may use a CSS framework ala Bootstrap uppon your own decission.
+
+For simplicity use django-tables (hint also takes a list of dicts as data).
+
+When finished zip and e-mail to mbierbaumer[at]onpointglobal(dot)com
